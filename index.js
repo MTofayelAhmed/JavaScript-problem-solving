@@ -26,3 +26,35 @@ function sumOfPositiveNumbers(arr) {
 const inputArr = [2, -5, 10, -3, 7];
 const outputSum = sumOfPositiveNumbers(inputArr);
 console.log(outputSum); // Output: 19
+
+
+
+
+
+function findMostFrequentElement(arr) {
+    let frequencyCounter = {};
+    let maxFrequency = 0;
+    let mostFrequentElement;
+  
+    for (const element of arr) {
+      if (frequencyCounter[element]) {
+        frequencyCounter[element]++;
+      } else {
+        frequencyCounter[element] = 1;
+      }
+  
+      if (frequencyCounter[element] > maxFrequency) {
+        maxFrequency = frequencyCounter[element];
+        mostFrequentElement = element;
+      }
+    }
+  
+    return mostFrequentElement;
+  }
+  
+  // Test the function
+  const input = [3, 5, 2, 5, 3, 3, 1, 4, 5];
+  const mostFrequent = findMostFrequentElement(input);
+  console.log(mostFrequent); // Output: 3
+  
+
